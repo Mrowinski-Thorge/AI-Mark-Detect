@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlyphGuard – KI-Zeichen-Detektor</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <div>
+        <h1>GlyphGuard</h1>
+        <p class="subtitle">Erkennt & bereinigt unsichtbare Unicode- und KI-typische Zeichen – 100% lokal.</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="impressum.html">Impressum</a>
+      <a href="https://github.com/Mrowinski-Thorge/AI-Watermark-Detect" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>Was ist das?</h2>
+      <p>Dieses Tool findet unsichtbare Zeichen (Zero-Width, Non-Breaking Space …) und „typische KI-Typographie“ (– — … „ “ ‘ ’) und ersetzt sie durch normale ASCII-Zeichen. Alles passiert <strong>lokal im Browser</strong>.</p>
+      <div class="downloads">
+        <a class="btn" href="https://raw.githubusercontent.com/Mrowinski-Thorge/AI-Watermark-Detect/main/js/invisiblesweep.js" download>JS-Library herunterladen</a>
+        <a class="btn secondary" href="https://github.com/Mrowinski-Thorge/AI-Watermark-Detect/archive/refs/heads/main.zip">Python (Repo-ZIP)</a>
+      </div>
+      <small class="muted">Hinweis: Die Python-Version liegt im Ordner <code>python/</code> (CLI inkl.).</small>
+    </section>
+
+    <section class="card">
+      <h2>Test hier im Browser</h2>
+      <textarea id="input" placeholder="Füge hier Text ein …"></textarea>
+      <div class="actions">
+        <button id="btnAnalyze" class="btn">Analysieren</button>
+        <button id="btnCleanCopy" class="btn success">Bereinigen & Kopieren</button>
+        <button id="btnClear" class="btn secondary">Feld leeren</button>
+      </div>
+
+      <div id="analysis" class="analysis">
+        <div class="muted" id="analysisEmpty">Noch keine Analyse durchgeführt.</div>
+        <div id="analysisTable"></div>
+      </div>
+
+      <div id="toast" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>© 2025 – <strong>GlyphGuard</strong> • <a href="impressum.html">Impressum</a></small>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
